@@ -1,4 +1,4 @@
-# **Daikin HVAC Predictive Refrigeration Loop — Digital Twin (Simscape) **
+## **Daikin HVAC Predictive Refrigeration Loop — Digital Twin (Simscape)**
 
 *A geometry-anchored, EXV/TXV-validated, component-correct digital twin for an R-32 refrigeration loop.*
 
