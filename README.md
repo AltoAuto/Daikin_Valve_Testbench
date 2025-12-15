@@ -114,8 +114,6 @@ System-level simulation features:
 
 ## **6. Validation Workflow**
 
-This README should list the same **phased validation pipeline** we’re building:
-
 1. **Phase 0 — Requirements & Acceptance Criteria**
 2. **Phase 1 — Component Harness Validation**
 3. **Phase 2 — Open-Loop Cycle Validation**
@@ -159,8 +157,6 @@ sim('RefrigerantLoop_main')
 
 ## **8. Included Documents**
 
-You can list uploaded engineering artifact PDFs here:
-
 * System schematic diagram 
 * Predictive TL-2P heat exchanger reference 
 * Daikin Applied Expansion Valve specifications
@@ -168,14 +164,9 @@ You can list uploaded engineering artifact PDFs here:
 * Compressor map documentation
 * AHRI 550/590 reference standard for cycle performance 
 
-This builds credibility.
-
 ---
 
 ## **9. FAQ / Known Limitations**
-
-Examples:
-
 * Current compressor map is from public Daikin R-32 dataset
 * TXV model validated only under steady superheat
 * Oil return not yet included
