@@ -74,7 +74,7 @@ matlab_tmp/
 temp/
 tmp/
 
-# --- Keep your own folders safe ---
+# --- My own folder ---
 !models/
 !scripts/
 !config/
