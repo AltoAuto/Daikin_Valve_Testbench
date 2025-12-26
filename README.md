@@ -45,11 +45,8 @@ daikin-valve-testbench/
 ├─ startup.m
 │  └─ Schematic.png
 ├─ model/
-│  └─ MainBench.slx
 ├─ cases/
-│  └─ case_nominal.m
 ├─ scripts/
-│  └─ run_main.m
 ├─ assets/
 │  └─ poster_thumb.png
 └─ results/        (gitignored)
