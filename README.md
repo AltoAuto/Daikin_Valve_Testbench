@@ -42,7 +42,6 @@ daikin-valve-testbench/
 │  ├─ Validation_Manual.pdf
 │  ├─ Design_Poster.pdf
 ├─ README.md
-├─ startup.m
 │  └─ Schematic.png
 ├─ model/
 ├─ cases/
