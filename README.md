@@ -38,17 +38,70 @@ The validation is organized into sequential phases with pass/fail criteria and d
 ## Repo Structure
 ```
 daikin-valve-testbench/
-├─ docs/
-│  ├─ Validation_Manual.pdf
-│  ├─ Design_Poster.pdf
 ├─ README.md
-│  └─ Schematic.png
-├─ model/
-├─ cases/
-├─ scripts/
-├─ assets/
-│  └─ poster_thumb.png
-└─ results/        (gitignored)
+├─ LICENSE
+├─ .gitignore
+│
+├─ docs/
+│  ├─ Validation_Manual.pdf              
+│  ├─ Design_Poster.pdf
+│  ├─ Design_Poster.png
+│  ├─ Schematic.pdf
+│  ├─ Schematic.png
+│  └─ resources/                          
+│
+├─ models/
+│  ├─ main_cycle/                       
+│  │  ├─ MainBench_TwoPhase.slx
+│  │  └─ README.md                     
+│  │
+│  └─ harness_components/           
+│     ├─ Harness_Compressor.slx
+│     ├─ Harness_EXV_OpenLoop.slx
+│     ├─ Harness_EvapHX.slx
+│     ├─ Harness_CondHX.slx
+│     └─ README.md                      
+│
+├─ tests/                                
+│  ├─ phase1_components/
+│  │  ├─ tests_Compressor_MapGrid_v1.m
+│  │  ├─ tests_EXV_mdot_dP_Window_v1.m
+│  │  ├─ tests_EvapHX_UA_DeltaP_v1.m
+│  │  └─ tests_CondHX_UA_DeltaP_v1.m
+│  │
+│  ├─ phase2_openloop/
+│  │  ├─ tests_OpenLoop_OperatingGrid_v1.m
+│  │  └─ tests_OpenLoop_mdot_dP_Coverage_v1.m
+│  │
+│  ├─ phase3_SH_control/
+│  │  ├─ tests_SHControl_9ptGrid_v1.m
+│  │  └─ tests_SH_SetpointSteps_v1.m
+│  │
+│  ├─ phase4_safety/
+│  │  └─ tests_WorstCase_Envelope_v1.m
+│  │
+│  ├─ phase5_energy_water/
+│  │  └─ tests_EnergyBalance_WaterDT_v1.m
+│  │
+│  └─ phase6_transients/
+│     ├─ tests_Startup_v1.m
+│     └─ tests_LoadStep_v1.m
+│
+├─ assets/                               
+│  ├─ poster_thumb.png
+│  ├─ schematic_thumb.png
+│  ├─ mdot_dP_map.png
+│  └─ sh_step.png
+│
+└─ results/              
+   ├─ phase1_components/
+   ├─ phase2_openloop/
+   ├─ phase3_SH_control/
+   ├─ phase4_safety/
+   ├─ phase5_energy_water/
+   ├─ phase6_transients/
+   └─ manifests/
+      └─ run_manifest.csv               
 ```
 
 ---
