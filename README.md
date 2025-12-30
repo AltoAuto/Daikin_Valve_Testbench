@@ -63,15 +63,13 @@ daikin-valve-testbench/
 │
 ├─ models/
 │  ├─ main_cycle/
-│  │  ├─ MainBench_TwoPhase.slx
-│  │  └─ EES_code
-│  │
+│  │  └─ MainBench_TwoPhase.slx
+│  ├─ EES_code
 │  └─ harness_components/
 │     ├─ Harness_Compressor.slx
 │     ├─ Harness_EXV_OpenLoop.slx
 │     ├─ Harness_EvapHX.slx
-│     ├─ Harness_CondHX.slx
-│     └─ README.md
+│     └─ Harness_CondHX.slx
 │
 ├─ tests_cases/
 │  ├─ phase1_components/
