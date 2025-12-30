@@ -64,7 +64,7 @@ daikin-valve-testbench/
 ├─ models/
 │  ├─ main_cycle/
 │  │  ├─ MainBench_TwoPhase.slx
-│  │  └─ README.md
+│  │  └─ EES_code
 │  │
 │  └─ harness_components/
 │     ├─ Harness_Compressor.slx
@@ -89,6 +89,7 @@ daikin-valve-testbench/
 │  │  └─ tests_SH_SetpointSteps_v1.m
 │  │
 │  ├─ phase4_safety/
+
 │  │  └─ tests_WorstCase_Envelope_v1.m
 │  │
 │  ├─ phase5_energy_water/
