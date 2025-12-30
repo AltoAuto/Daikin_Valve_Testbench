@@ -1,8 +1,20 @@
 <h1 align="center">Daikin Valve Test Bench Digital Twin
-<hr>
-<p align="center">
-  <img src="assets/poster_thumb.png" width="950" alt="Design Poster Overview">
-</p>
+<h2 align="center">Loop Architecture Comparison</h2>
+
+<table align="center">
+  <tr>
+    <th>Proposed Loop Design</th>
+    <th>Simscape Implementation</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="docs/Proposed loop schematic.png" width="450" alt="Proposed Loop Schematic">
+    </td>
+    <td align="center">
+      <img src="docs/Simscape schematic.png" width="450" alt="Simscape Loop Schematic">
+    </td>
+  </tr>
+</table>
 
 ## What This Project Is 
 This repository contains a **Simscape-based digital twin** of a vapor-compression refrigerant loop designed to support **expansion valve testing** (EXV/TXV). The model is built to answer the same questions an HVAC OEM would ask:
