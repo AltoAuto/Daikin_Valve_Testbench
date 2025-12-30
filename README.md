@@ -1,5 +1,4 @@
 <h1 align="center">Daikin Valve Test Bench Digital Twin
-<h2 align="center">Loop Architecture Comparison</h2>
 
 <table align="center">
   <tr>
