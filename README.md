@@ -32,6 +32,45 @@ This repository contains a **Simscape-based digital twin** of a vapor-compressio
 - **Validation style:** phased “test suite” (component → open-loop → closed-loop → safety → energy → dynamics)
 
 ---
+## Component-Level Models (Validation Harnesses)
+
+<p align="center">
+Each major physical component is modeled and validated independently
+using dedicated Simscape harnesses prior to system integration.
+</p>
+
+<table align="center">
+  <tr>
+    <th>Compressor</th>
+    <th>Expansion Valve (EXV)</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/Components/Compressor.png" width="300"><br>
+      <sub>Variable-speed compressor harness</sub>
+    </td>
+    <td align="center">
+      <img src="assets/Components/EXV.png" width="300"><br>
+      <sub>Electronic expansion valve (open-loop / SH control)</sub>
+    </td>
+  </tr>
+  <tr>
+    <th>Evaporator</th>
+    <th>Condenser</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/Components/Evaporator.png" width="300"><br>
+      <sub>Two-phase evaporator HX model</sub>
+    </td>
+    <td align="center">
+      <img src="assets/Components/Condenser.png" width="300"><br>
+      <sub>Condenser HX model with water-side coupling</sub>
+    </td>
+  </tr>
+</table>
+
+---
 ## Validation Framework
 
 The validation is organized into sequential phases with pass/fail criteria and documented evidence.
