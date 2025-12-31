@@ -71,6 +71,21 @@ using dedicated Simscape harnesses prior to system integration.
 </table>
 
 ---
+## TXV vs EXV Main Loop Configuration
+
+<p align="center">
+  <img src="assets/Components/TXV_EXV_mainloop.png" width="800" alt="TXV and EXV Integrated Main Loop">
+</p>
+
+This configuration illustrates the integrated main-loop architecture supporting
+both **TXV** and **EXV** operation modes within the same refrigerant loop.
+The model enables direct comparison of:
+- mass-flow authority,
+- superheat regulation behavior,
+- stability and saturation limits,
+- and safety envelope compliance under identical boundary conditions.
+
+---
 ## Validation Framework
 
 The validation is organized into sequential phases with pass/fail criteria and documented evidence.
