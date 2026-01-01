@@ -41,34 +41,33 @@ using dedicated Simscape harnesses prior to system integration.
 
 <table align="center">
   <tr>
-    <th>Compressor</th>
-    <th>Expansion Valve (EXV)</th>
+    <th colspan="2">Refrigerant-Side Components</th>
   </tr>
   <tr>
     <td align="center">
-      <img src="assets/Components/Compressor.png" width="300"><br>
+      <img src="assets/Components/Compressor.png" width="420"><br>
       <sub>Variable-speed compressor harness</sub>
     </td>
     <td align="center">
-      <img src="assets/Components/EXV.png" width="300"><br>
+      <img src="assets/Components/EXV.png" width="420"><br>
       <sub>Electronic expansion valve (open-loop / SH control)</sub>
     </td>
   </tr>
   <tr>
-    <th>Evaporator</th>
-    <th>Condenser</th>
+    <th colspan="2">Heat Exchangers</th>
   </tr>
   <tr>
     <td align="center">
-      <img src="assets/Components/Evaporator.png" width="300"><br>
-      <sub>Two-phase evaporator HX model</sub>
+      <img src="assets/Components/Evaporator.png" width="420"><br>
+      <sub>Two-phase evaporator heat exchanger model</sub>
     </td>
     <td align="center">
-      <img src="assets/Components/Condenser.png" width="300"><br>
-      <sub>Condenser HX model with water-side coupling</sub>
+      <img src="assets/Components/Condenser.png" width="420"><br>
+      <sub>Condenser heat exchanger with water-side coupling</sub>
     </td>
   </tr>
 </table>
+
 
 ---
 ## Conceptual Mechanical Layout (CAD)
