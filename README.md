@@ -71,19 +71,24 @@ using dedicated Simscape harnesses prior to system integration.
 </table>
 
 ---
-## TXV vs EXV Main Loop Configuration
+## Conceptual Mechanical Layout (CAD)
 
 <p align="center">
-  <img src="assets/Components/TXV_EXV_mainloop.png" width="800" alt="TXV and EXV Integrated Main Loop">
+  <img src="docs/CAD.png" width="850" alt="Test Bench CAD Layout Overview">
 </p>
 
-This configuration illustrates the integrated main-loop architecture supporting
-both **TXV** and **EXV** operation modes within the same refrigerant loop.
-The model enables direct comparison of:
-- mass-flow authority,
-- superheat regulation behavior,
-- stability and saturation limits,
-- and safety envelope compliance under identical boundary conditions.
+<p align="center">
+  <em>
+  Conceptual mechanical layout used to reason about component placement,
+  service access, routing feasibility, and instrumentation locations
+  relevant to validation.
+  </em>
+</p>
+> Note: This CAD is intentionally conceptual and is used for system integration
+> and validation planning only; detailed manufacturing drawings are outside
+> the scope of this work.
+
+
 
 ---
 ## Validation Framework
