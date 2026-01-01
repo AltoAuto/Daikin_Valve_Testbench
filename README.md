@@ -83,6 +83,7 @@ using dedicated Simscape harnesses prior to system integration.
   relevant to validation.
   </em>
 </p>
+
 > Note: This CAD is intentionally conceptual and is used for system integration
 > and validation planning only; detailed manufacturing drawings are outside
 > the scope of this work.
