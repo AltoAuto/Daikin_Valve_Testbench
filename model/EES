@@ -1,6 +1,6 @@
-"-----------------------------
-" Inputs (from vendor map point)
-"-----------------------------
+"-----------------------------"
+" Inputs (from vendor map point) "
+"-----------------------------"
 T_h= 50  [c] "Condensing saturated temperature"
 T_l= 5 [c] "Evaporating saturated temperature"
 T_SH= 5 [K] "Superheat temperature at compressor inlet"
@@ -9,38 +9,39 @@ Q_C = 52.7576 [kW] "Cooling Capacity"
 W_comp= 11.8802 [kW] "Compressor Power"
 
 eta_drive = 1 "If W_comp is Electrical, set it to eta_motor * eta_mech, else set it to '1' assuming is SHAFT/Fluid power already"
+
 Fluid$ = 'R32'
 
-"-----------------------------
-" Saturation pressures
-"-----------------------------
+"-----------------------------"
+" Saturation pressures "
+"-----------------------------"
 P_l = Pressure(Fluid$, T=T_l, x=1)   "Evap saturation pressure"
 P_h = Pressure(Fluid$, T=T_h, x=1)   "Cond saturation pressure"
 
-"-----------------------------
-" State 1 (compressor inlet)
-"-----------------------------
+"-----------------------------"
+" State 1 (compressor inlet) "
+"-----------------------------"
 T_1 = T_l + T_SH
 P_1 = P_l
 h_1 = Enthalpy(Fluid$, T=T_1, P=P_1)
 s_1 = Entropy(Fluid$,  T=T_1, P=P_1)
 
-"-----------------------------
-" State 3 (valve inlet, subcooled liquid)
-"-----------------------------
+"-----------------------------"
+" State 3 (valve inlet, subcooled liquid) "
+"-----------------------------"
 T_3 = T_h - T_SC
 P_3 = P_h
 h_3 = Enthalpy(Fluid$, T=T_3, P=P_3)
 
-"-----------------------------
-" State 4 (valve outlet, isenthalpic)
-"-----------------------------
+"-----------------------------"
+" State 4 (valve outlet, isenthalpic) "
+"-----------------------------"
 P_4 = P_l
 h_4 = h_3
 
-"-----------------------------
-" Use compressor power to get actual discharge enthalpy
-"-----------------------------
+"-----------------------------"
+" Use compressor power to get actual discharge enthalpy "
+"-----------------------------"
 W_fluid = W_comp * eta_drive         "power delivered to refrigerant"
 h_2 = h_1 + W_fluid / m_dot
 P_2 = P_h
@@ -48,15 +49,15 @@ P_2 = P_h
 T_2 = Temperature(Fluid$, P=P_2, h=h_2)
 s_2 = Entropy(Fluid$,     P=P_2, h=h_2)
 
-"-----------------------------
-" Isentropic reference + efficiency (for reporting / sanity)
-"-----------------------------
+"-----------------------------"
+" Isentropic reference + efficiency (for reporting / sanity) "
+"-----------------------------"
 h_2s = Enthalpy(Fluid$, P=P_2, s=s_1)
 eta_is = (h_2s - h_1) / (h_2 - h_1)
 
-"-----------------------------
-" Useful checks
-"-----------------------------
+"-----------------------------"
+" Useful checks " 
+"-----------------------------"
 Q_cond = m_dot * (h_2 - h_3)
 COP = Q_C / W_comp
 
