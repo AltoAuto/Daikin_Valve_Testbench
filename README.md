@@ -78,7 +78,7 @@ using dedicated Simscape harnesses prior to system integration.
 
 <p align="center">
   <em>
-  Conceptual mechanical layout used to reason about component placement,
+  Mechanical layout used to reason about component placement,
   service access, routing feasibility, and instrumentation locations
   relevant to validation.
   </em>
