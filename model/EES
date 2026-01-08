@@ -8,6 +8,7 @@ T_SC= 4 [K] "Subcool temperature at expansion valve inlet"
 Q_C = 52.7576 [kW] "Cooling Capacity"
 W_comp= 11.8802 [kW] "Compressor Power"
 
+eta_drive = 1 "If W_comp is Electrical, set it to eta_motor * eta_mech, else set it to '1' assuming is SHAFT/Fluid power already"
 Fluid$ = 'R32'
 
 "-----------------------------
