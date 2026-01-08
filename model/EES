@@ -1,0 +1,34 @@
+"Adjustable parameters"
+T_h= 50  [c] "Condensing saturated temperature"
+T_l= 5 [c] "Evaporating saturated temperature"
+P_h= 2900 [kPa] "Condensing saturated pressure"
+P_l= 1320 [kPa] "Evaporating saturated pressure"
+
+T_SH= 5 [K] "Superheat temperature at compressor inlet"
+T_SC= 4 [K] "Subcool temperature at expansion valve inlet"
+
+Q_C = 52.7576 [kW] "Cooling Capacity"
+W_comp= 11.8802 [kW] "Compressor Power"
+
+"State Fixing"
+S_1s = Entropy('r32', T=T_l, x=1) "Ideal entropy at state 1, compressor inlet"
+P_1s = Pressure('r32', T=T_l, x=1) "Saturated pressure at compressor inlet" 
+S_1 = Entropy('r32', T= T_l + T_SH, P= P_1s) "Entropy at state 1, compressor inlet"
+S_2s = S_1
+P_2s = Pressure('r32', T= T_h,x=1) "Saturated pressure at condenser inlet"
+S_2 = Entropy('r32', T= T_h+T_SH, P=P_2s) "Actual entropy at state 2, condenser inlet"
+S_3 = Entropy('r32', T= T_h-T_SC, P=P_2s) "Actual entropy at state 3, valve inlet"
+h_3 = Enthalpy('r32', T=T_h-T_SC, P=P_2s) "Enthalpy at state 3, valve inlet"
+h_4 = h_3 "Enthalpy at state 4, evaporator inlet"
+h_1 = Enthalpy('r32', T=T_l+T_SH, s=S_2s) "Enthalpy at state 1, compressor inlet"
+h_2 = Enthalpy('r32', P=P_2s, s=S_2s) "Enthalpy at state 2, condensor inlet"
+h_2s = Enthalpy('r32', P= P_2s, s= S_1) "Ideal enthalpy at state 2s, conders inlet"
+P_3 = P_2s "Pressure at state 3, valve inlet"
+P_4 = pressure ('r32', T=T_l, x=0) "Saturated pressure at state 4, evaporator inlet"
+P_1 = pressure ('r32', T=T_l +T_SH, h=h_1) "Pressure at state 1, compressor inlet"
+
+"Pressure and mass flow estimations"
+DeltaP_valve = P_3-P_4
+DeltaP_evap = P_4-P_1 
+m_comp = W_comp/(h_2-h_1)
+m_evap = Q_C/(h_1-h_4)
