@@ -107,6 +107,8 @@ The validation is organized into sequential phases with pass/fail criteria and d
 
 ## Repo Structure
 ```
+## Repo Structure
+
 daikin-valve-testbench/
 ├─ README.md
 ├─ LICENSE
@@ -120,65 +122,66 @@ daikin-valve-testbench/
 │  ├─ Schematic.png
 │  └─ resources/
 │
-├─ models/
-│  ├─ main_cycle/
-│  │  └─ MainBench_TwoPhase.slx
-│  ├─ EES_code
-│  └─ harness_components/
-│     ├─ Harness_Compressor.slx
-│     ├─ Harness_EXV_OpenLoop.slx
-│     ├─ Harness_EvapHX.slx
-│     └─ Harness_CondHX.slx
-│
-├─ tests_cases/
-│  ├─ phase1_components/
-│  │  ├─ tests_Compressor_MapGrid_v1.m
-│  │  ├─ tests_EXV_mdot_dP_Window_v1.m
-│  │  ├─ tests_EvapHX_UA_DeltaP_v1.m
-│  │  └─ tests_CondHX_UA_DeltaP_v1.m
+├─ project_model/
+│  ├─ models/
+│  │  ├─ main_cycle/
+│  │  │  └─ MainBench_TwoPhase.slx
+│  │  ├─ EES_code/
+│  │  └─ harness_components/
+│  │     ├─ Harness_Compressor.slx
+│  │     ├─ Harness_EXV_OpenLoop.slx
+│  │     ├─ Harness_EvapHX.slx
+│  │     └─ Harness_CondHX.slx
 │  │
-│  ├─ phase2_openloop/
-│  │  ├─ tests_OpenLoop_OperatingGrid_v1.m
-│  │  └─ tests_OpenLoop_mdot_dP_Coverage_v1.m
+│  ├─ tests_cases/
+│  │  ├─ phase1_components/
+│  │  │  ├─ tests_Compressor_MapGrid_v1.m
+│  │  │  ├─ tests_EXV_mdot_dP_Window_v1.m
+│  │  │  ├─ tests_EvapHX_UA_DeltaP_v1.m
+│  │  │  └─ tests_CondHX_UA_DeltaP_v1.m
+│  │  │
+│  │  ├─ phase2_openloop/
+│  │  │  ├─ tests_OpenLoop_OperatingGrid_v1.m
+│  │  │  └─ tests_OpenLoop_mdot_dP_Coverage_v1.m
+│  │  │
+│  │  ├─ phase3_SH_control/
+│  │  │  ├─ tests_SHControl_9ptGrid_v1.m
+│  │  │  └─ tests_SH_SetpointSteps_v1.m
+│  │  │
+│  │  ├─ phase4_safety/
+│  │  │  └─ tests_WorstCase_Envelope_v1.m
+│  │  │
+│  │  ├─ phase5_energy_water/
+│  │  │  └─ tests_EnergyBalance_WaterDT_v1.m
+│  │  │
+│  │  └─ phase6_transients/
+│  │     ├─ tests_Startup_v1.m
+│  │     └─ tests_LoadStep_v1.m
 │  │
-│  ├─ phase3_SH_control/
-│  │  ├─ tests_SHControl_9ptGrid_v1.m
-│  │  └─ tests_SH_SetpointSteps_v1.m
-│  │
-│  ├─ phase4_safety/
-│  │  └─ tests_WorstCase_Envelope_v1.m
-│  │
-│  ├─ phase5_energy_water/
-│  │  └─ tests_EnergyBalance_WaterDT_v1.m
-│  │
-│  └─ phase6_transients/
-│     ├─ tests_Startup_v1.m
-│     └─ tests_LoadStep_v1.m
-│
-├─ scripts/
-│  ├─ run_phase1_components.m
-│  ├─ run_phase2_openloop.m
-│  ├─ run_phase3_SH_control.m
-│  ├─ run_phase4_safety.m
-│  ├─ run_phase5_energy_water.m
-│  ├─ run_phase6_transients.m
-│  ├─ run_validation_all.m
-│  │
-│  ├─ runners/
-│  │  ├─ run_harness_Compressor.m
-│  │  ├─ run_harness_EXV_OpenLoop.m
-│  │  ├─ run_harness_EvapHX.m
-│  │  ├─ run_harness_CondHX.m
-│  │  └─ run_main_cycle_case.m
-│  │
-│  └─ postprocess/
-│     ├─ plot_CompressorCurves.m
-│     ├─ plot_EXV_mdot_dP_Map.m
-│     ├─ plot_SH_StepResponse.m
-│     ├─ plot_SafetyEnvelope.m
-│     ├─ plot_EnergyBalance.m
-│     ├─ plot_WaterSide_DT.m
-│     └─ export_figures.m
+│  └─ scripts/
+│     ├─ run_phase1_components.m
+│     ├─ run_phase2_openloop.m
+│     ├─ run_phase3_SH_control.m
+│     ├─ run_phase4_safety.m
+│     ├─ run_phase5_energy_water.m
+│     ├─ run_phase6_transients.m
+│     ├─ run_validation_all.m
+│     │
+│     ├─ runners/
+│     │  ├─ run_harness_Compressor.m
+│     │  ├─ run_harness_EXV_OpenLoop.m
+│     │  ├─ run_harness_EvapHX.m
+│     │  ├─ run_harness_CondHX.m
+│     │  └─ run_main_cycle_case.m
+│     │
+│     └─ postprocess/
+│        ├─ plot_CompressorCurves.m
+│        ├─ plot_EXV_mdot_dP_Map.m
+│        ├─ plot_SH_StepResponse.m
+│        ├─ plot_SafetyEnvelope.m
+│        ├─ plot_EnergyBalance.m
+│        ├─ plot_WaterSide_DT.m
+│        └─ export_figures.m
 │
 ├─ assets/
 │  ├─ poster_thumb.png
