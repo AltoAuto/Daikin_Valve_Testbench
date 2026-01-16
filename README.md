@@ -169,4 +169,4 @@ This repository is maintained by **Aidan W.** as a portfolio-quality technical p
 
 **Team context**
 - University senior design collaboration  
-- Contributor names are listed in the design poster and final report where applicable
+- Contributor names are listed in the design poster 
